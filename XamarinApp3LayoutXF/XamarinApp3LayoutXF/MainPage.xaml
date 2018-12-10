@@ -2,13 +2,22 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:XamarinApp3LayoutXF"
-             x:Class="XamarinApp3LayoutXF.MainPage">
-
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
-
+             x:Class="XamarinApp3LayoutXF.MainPage"
+             Title="Main Page"
+             BackgroundColor="#8cf3ff">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="CenterAndExpand">
+            <!-- Place new controls here -->
+            <Button Text="Stack"
+                    Clicked="GoToStackPage"></Button>
+            <Button Text="Grid"
+                    Clicked="GoToGridPage"></Button>
+            <Button Text="Absolute"
+                    Clicked="GoToAbsolutePage"></Button>
+            <Button Text="Relative"
+                    Clicked="GoToRelativePage"></Button>
+            <Button Text="Scroll"
+                    Clicked="GoToScrollPage"></Button>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

@@ -11,7 +11,11 @@ namespace XamarinApp3LayoutXF
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage())
+            {
+                BarBackgroundColor = Color.SlateBlue,
+                BarTextColor = Color.White
+            };
         }
 
         protected override void OnStart()
