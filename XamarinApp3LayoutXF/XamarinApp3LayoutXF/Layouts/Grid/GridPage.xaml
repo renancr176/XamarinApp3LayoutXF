@@ -5,10 +5,60 @@
              Title="Grid Layout"
              BackgroundColor="#8cf3ff">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Grid Layout"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <!-- Define quantas linhas -->
+                <RowDefinition Height="100"></RowDefinition>
+                <RowDefinition Height="100"></RowDefinition>
+                <RowDefinition Height="100"></RowDefinition>
+                <RowDefinition Height="100"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <!-- Define quantas colunas -->
+                <ColumnDefinition Width="150"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <BoxView Grid.Row="0"
+                     Grid.Column="0"
+                     BackgroundColor="Blue" 
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand"></BoxView>
+            <BoxView Grid.Row="0"
+                     Grid.Column="1"
+                     BackgroundColor="OrangeRed" 
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand"></BoxView>
+            <BoxView Grid.Row="0"
+                     Grid.Column="2"
+                     BackgroundColor="Yellow" 
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand"></BoxView>
+            <BoxView Grid.Row="1"
+                     Grid.Column="0"
+                     Grid.ColumnSpan="3"
+                     BackgroundColor="Purple" 
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand"></BoxView>
+            <BoxView Grid.Row="2"
+                     Grid.Column="0"
+                     Grid.RowSpan="2"
+                     BackgroundColor="OrangeRed" 
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand"></BoxView>
+            <BoxView Grid.Row="2"
+                     Grid.Column="1"
+                     Grid.ColumnSpan="2"
+                     BackgroundColor="Yellow" 
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand"></BoxView>
+            <BoxView Grid.Row="3"
+                     Grid.Column="1"
+                     Grid.ColumnSpan="2"
+                     BackgroundColor="Blue" 
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand"></BoxView>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
+    

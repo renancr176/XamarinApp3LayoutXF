@@ -5,10 +5,94 @@
              Title="Scroll"
              BackgroundColor="#8cf3ff">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Scroll"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <!-- <ScrollView Orientation="Vertical"> Vertical é default -->
+        <ScrollView Orientation="Both">
+            <StackLayout WidthRequest="1000"
+                         HeightRequest="1000">
+                <Label Text="Stack Layout dentro de um ScrollView"></Label>
+                <StackLayout>
+                    <StackLayout Orientation="Vertical"
+                                 HorizontalOptions="FillAndExpand"
+                                 VerticalOptions="FillAndExpand"
+                                 BackgroundColor="White"
+                                 Spacing="3"
+                                 Margin="15, 5, 10, 20"
+                                 Padding="5">
+                        <BoxView BackgroundColor="Yellow"
+                                 HorizontalOptions="FillAndExpand"
+                                 VerticalOptions="FillAndExpand"></BoxView>
+                        <BoxView BackgroundColor="Purple"
+                                 HorizontalOptions="FillAndExpand"
+                                 VerticalOptions="FillAndExpand"></BoxView>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal"
+                                 HorizontalOptions="FillAndExpand"
+                                 VerticalOptions="FillAndExpand"
+                                 Spacing="0">
+                        <BoxView BackgroundColor="OrangeRed"
+                                 HorizontalOptions="FillAndExpand"
+                                 VerticalOptions="FillAndExpand"></BoxView>
+                        <BoxView BackgroundColor="Blue"
+                                 HorizontalOptions="FillAndExpand"
+                                 VerticalOptions="FillAndExpand"></BoxView>
+                    </StackLayout>
+                </StackLayout>
+                <Label Text="Grid dentro de um ScrollView"></Label>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <!-- Define quantas linhas -->
+                        <RowDefinition Height="100"></RowDefinition>
+                        <RowDefinition Height="100"></RowDefinition>
+                        <RowDefinition Height="100"></RowDefinition>
+                        <RowDefinition Height="100"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <!-- Define quantas colunas -->
+                        <ColumnDefinition Width="150"></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <BoxView Grid.Row="0"
+                     Grid.Column="0"
+                     BackgroundColor="Blue" 
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand"></BoxView>
+                    <BoxView Grid.Row="0"
+                     Grid.Column="1"
+                     BackgroundColor="OrangeRed" 
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand"></BoxView>
+                    <BoxView Grid.Row="0"
+                     Grid.Column="2"
+                     BackgroundColor="Yellow" 
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand"></BoxView>
+                    <BoxView Grid.Row="1"
+                     Grid.Column="0"
+                     Grid.ColumnSpan="3"
+                     BackgroundColor="Purple" 
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand"></BoxView>
+                    <BoxView Grid.Row="2"
+                     Grid.Column="0"
+                     Grid.RowSpan="2"
+                     BackgroundColor="OrangeRed" 
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand"></BoxView>
+                    <BoxView Grid.Row="2"
+                     Grid.Column="1"
+                     Grid.ColumnSpan="2"
+                     BackgroundColor="Yellow" 
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand"></BoxView>
+                    <BoxView Grid.Row="3"
+                     Grid.Column="1"
+                     Grid.ColumnSpan="2"
+                     BackgroundColor="Blue" 
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand"></BoxView>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

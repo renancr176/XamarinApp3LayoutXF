@@ -5,10 +5,22 @@
              Title="Relative Layout"
              BackgroundColor="#8cf3ff">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Relative Layout"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <RelativeLayout>
+            <!-- <BoxView RelativeLayout.WidthConstraint="{ConstraintExpression Type=, ElementName=, Property=, Factor=, Constant=}"
+                     BackgroundColor="Blue"></BoxView> -->
+            <BoxView RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant=-50}"
+                     BackgroundColor="Blue"></BoxView>
+
+            <BoxView x:Name="Box1"
+                     BackgroundColor="OrangeRed"
+                     Margin="50"
+                     WidthRequest="100"
+                     HeightRequest="100"></BoxView>
+            <BoxView RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=Box1, Property=X, Factor=1, Constant=50}"
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=Box1, Property=Y, Factor=1, Constant=50}"
+                     BackgroundColor="Yellow"
+                     WidthRequest="100"
+                     HeightRequest="100"></BoxView>
+        </RelativeLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -8,18 +8,23 @@
         <StackLayout>
             <StackLayout Orientation="Vertical"
                          HorizontalOptions="FillAndExpand"
-                         VerticalOptions="FillAndExpand">
-                <BoxView BackgroundColor="Green"
+                         VerticalOptions="FillAndExpand"
+                         BackgroundColor="White"
+                         Spacing="3"
+                         Margin="15, 5, 10, 20"
+                         Padding="5">
+                <BoxView BackgroundColor="Yellow"
                          HorizontalOptions="FillAndExpand"
                          VerticalOptions="FillAndExpand"></BoxView>
-                <BoxView BackgroundColor="Blue"
+                <BoxView BackgroundColor="Purple"
                          HorizontalOptions="FillAndExpand"
                          VerticalOptions="FillAndExpand"></BoxView>
             </StackLayout>
             <StackLayout Orientation="Horizontal"
                          HorizontalOptions="FillAndExpand"
-                         VerticalOptions="FillAndExpand">
-                <BoxView BackgroundColor="Green"
+                         VerticalOptions="FillAndExpand"
+                         Spacing="0">
+                <BoxView BackgroundColor="OrangeRed"
                          HorizontalOptions="FillAndExpand"
                          VerticalOptions="FillAndExpand"></BoxView>
                 <BoxView BackgroundColor="Blue"
